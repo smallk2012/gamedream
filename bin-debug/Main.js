@@ -75,6 +75,11 @@ var Main = (function (_super) {
     __extends(Main, _super);
     function Main() {
         var _this = _super.call(this) || this;
+        _this.seziState = 0;
+        _this.seziAniNum = 0;
+        _this.btns = [];
+        _this.skills = [];
+        _this.speed = 0;
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
         return _this;
     }
@@ -96,24 +101,12 @@ var Main = (function (_super) {
     };
     Main.prototype.runGame = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var result, userInfo;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.loadResource()];
                     case 1:
                         _a.sent();
                         this.createGameScene();
-                        return [4 /*yield*/, RES.getResAsync("description_json")];
-                    case 2:
-                        result = _a.sent();
-                        this.startAnimation(result);
-                        return [4 /*yield*/, platform.login()];
-                    case 3:
-                        _a.sent();
-                        return [4 /*yield*/, platform.getUserInfo()];
-                    case 4:
-                        userInfo = _a.sent();
-                        console.log(userInfo);
                         return [2 /*return*/];
                 }
             });
@@ -150,86 +143,280 @@ var Main = (function (_super) {
      * Create a game scene
      */
     Main.prototype.createGameScene = function () {
-        var sky = this.createBitmapByName("bg_jpg");
-        this.addChild(sky);
-        var stageW = this.stage.stageWidth;
-        var stageH = this.stage.stageHeight;
-        sky.width = stageW;
-        sky.height = stageH;
-        var topMask = new egret.Shape();
-        topMask.graphics.beginFill(0x000000, 0.5);
-        topMask.graphics.drawRect(0, 0, stageW, 172);
-        topMask.graphics.endFill();
-        topMask.y = 33;
-        this.addChild(topMask);
-        var icon = this.createBitmapByName("egret_icon_png");
-        this.addChild(icon);
-        icon.x = 26;
-        icon.y = 33;
-        var line = new egret.Shape();
-        line.graphics.lineStyle(2, 0xffffff);
-        line.graphics.moveTo(0, 0);
-        line.graphics.lineTo(0, 117);
-        line.graphics.endFill();
-        line.x = 172;
-        line.y = 61;
-        this.addChild(line);
-        var colorLabel = new egret.TextField();
-        colorLabel.textColor = 0xffffff;
-        colorLabel.width = stageW - 172;
-        colorLabel.textAlign = "center";
-        colorLabel.text = "Hello Egret";
-        colorLabel.size = 24;
-        colorLabel.x = 172;
-        colorLabel.y = 80;
-        this.addChild(colorLabel);
-        var textfield = new egret.TextField();
-        this.addChild(textfield);
-        textfield.alpha = 0;
-        textfield.width = stageW - 172;
-        textfield.textAlign = egret.HorizontalAlign.CENTER;
-        textfield.size = 24;
-        textfield.textColor = 0xffffff;
-        textfield.x = 172;
-        textfield.y = 135;
-        this.textfield = textfield;
-    };
-    /**
-     * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
-     * Create a Bitmap object according to name keyword.As for the property of name please refer to the configuration file of resources/resource.json.
-     */
-    Main.prototype.createBitmapByName = function (name) {
-        var result = new egret.Bitmap();
-        var texture = RES.getRes(name);
-        result.texture = texture;
-        return result;
-    };
-    /**
-     * 描述文件加载成功，开始播放动画
-     * Description file loading is successful, start to play the animation
-     */
-    Main.prototype.startAnimation = function (result) {
-        var _this = this;
-        var parser = new egret.HtmlTextParser();
-        var textflowArr = result.map(function (text) { return parser.parse(text); });
-        var textfield = this.textfield;
-        var count = -1;
-        var change = function () {
-            count++;
-            if (count >= textflowArr.length) {
-                count = 0;
+        var _bg = Global.Ins().createBitmapByName("bg_game_jpg");
+        this.addChild(_bg);
+        var _ani1 = {
+            skill: {
+                name: "0235-7367af0f-000",
+                frame: 42,
+                attFrame: 39
+            },
+            idle: {
+                name: "0241-a9b78cf6-000",
+                frame: 7
+            },
+            attack: {
+                name: "0130-57edea8e-000",
+                frame: 11,
+                attFrame: 5
+            },
+            magic: {
+                name: "0084-3c9b8403-000",
+                frame: 13,
+                attFrame: 5
+            },
+            hit: {
+                name: "0222-9e9c0cea-000",
+                frame: 2
+            },
+            die: {
+                name: "0272-bfd770e7-000",
+                frame: 8
             }
-            var textFlow = textflowArr[count];
-            // 切换描述内容
-            // Switch to described content
-            textfield.textFlow = textFlow;
-            var tw = egret.Tween.get(textfield);
-            tw.to({ "alpha": 1 }, 200);
-            tw.wait(2000);
-            tw.to({ "alpha": 0 }, 200);
-            tw.call(change, _this);
         };
-        change();
+        var _ani2 = {
+            skill: {
+                name: "0235-7367af0f-000",
+                frame: 42,
+                attFrame: 39
+            },
+            idle: {
+                name: "0241-a9b78cf6-020",
+                frame: 7
+            },
+            attack: {
+                name: "0130-57edea8e-020",
+                frame: 11,
+                attFrame: 5
+            },
+            magic: {
+                name: "0084-3c9b8403-020",
+                frame: 13,
+                attFrame: 5
+            },
+            hit: {
+                name: "0222-9e9c0cea-020",
+                frame: 2
+            },
+            die: {
+                name: "0272-bfd770e7-020",
+                frame: 8
+            }
+        };
+        this.role1 = new Animation();
+        this.addChild(this.role1);
+        this.role1.x = this.role1.oX = 328;
+        this.role1.y = this.role1.oY = 234;
+        this.role1.ani = _ani1;
+        this.role1.setAni(Animation.IDLE);
+        this.role1.runAni();
+        this.role1.mX = 778;
+        this.role1.mY = 404;
+        this.role1.hX = this.role1.oX - 10;
+        this.role1.hY = this.role1.oY - 10;
+        this.role1.aniState = 0;
+        this.role1.hitCount = 0;
+        this.role1.addEventListener(AniEvent.CHANGE_ANI, this.attackEvt, this);
+        this.role1.addEventListener(AniEvent.GAME_END, this.gameEvt, this);
+        this.role2 = new Animation();
+        this.addChild(this.role2);
+        this.role2.x = this.role2.oX = 838;
+        this.role2.y = this.role2.oY = 440;
+        this.role2.ani = _ani2;
+        this.role2.setAni(Animation.IDLE);
+        this.role2.runAni();
+        this.role2.mX = 398;
+        this.role2.mY = 270;
+        this.role2.hX = this.role2.oX + 10;
+        this.role2.hY = this.role2.oY + 10;
+        this.role2.aniState = 0;
+        this.role2.hitCount = 0;
+        this.role2.addEventListener(AniEvent.CHANGE_ANI, this.attackEvt, this);
+        this.role2.addEventListener(AniEvent.GAME_END, this.gameEvt, this);
+        this.addEventListener(egret.Event.ENTER_FRAME, this.onFrameEvt, this);
+        for (var i = 1; i <= 3; i++) {
+            var _btn = new Btn();
+            this.addChild(_btn);
+            _btn.init(i);
+            _btn.tag = i - 1;
+            _btn.y = 180 + ((33 + 20) * (i - 1));
+            _btn.x = Math.floor((Global.Ins().stageW - 100) / 2);
+            _btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.seziEvt, this);
+            this.btns.push(_btn);
+        }
+        this.hp1 = new egret.TextField();
+        this.addChild(this.hp1);
+        this.hp1.text = '1000';
+        this.hp1.textColor = 0xff0000;
+        this.hp1.x = 0;
+        this.hp2 = new egret.TextField();
+        this.addChild(this.hp2);
+        this.hp2.text = '1000';
+        this.hp2.textColor = 0xff0000;
+        this.hp2.x = this.stage.stageWidth - 100;
+        this.tip = new egret.TextField();
+        this.addChild(this.tip);
+        this.tip.text = '';
+        this.tip.textColor = 0xff0000;
+        this.tip.x = (this.stage.stageWidth / 2) - 100;
+        this.tip.y = 300;
+        this.tip.visible = false;
+        this.tip.touchEnabled = true;
+        this.tip.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTipEvt, this);
+    };
+    Main.prototype.onFrameEvt = function (e) {
+        if (Math.floor(this.speed % 5) == 0) {
+            this.role1.runAni();
+            this.role2.runAni();
+        }
+        this.speed = this.speed >= 100000 ? 0 : this.speed + 1;
+    };
+    Main.prototype.attackEvt = function (e) {
+        switch (e.data.aniType) {
+            case Animation.ATTACK:
+                switch (this.seziState) {
+                    case 1:
+                        this.role2.setAni(Animation.HIT);
+                        break;
+                    case 2:
+                        this.role1.setAni(Animation.HIT);
+                        break;
+                }
+                break;
+            case Animation.MAGIC:
+                switch (this.seziState) {
+                    case 1:
+                        this.role2.setAni(Animation.SKILL);
+                        break;
+                    case 2:
+                        this.role1.setAni(Animation.SKILL);
+                        break;
+                }
+                break;
+            case Animation.IDLE:
+                switch (this.seziState) {
+                    case 1:
+                        this.role2.setAni(Animation.IDLE);
+                        break;
+                    case 2:
+                        this.role1.setAni(Animation.IDLE);
+                        break;
+                }
+                break;
+        }
+    };
+    Main.prototype.gameEvt = function (e) {
+        this.hp1.text = this.role1.hp.toString();
+        this.hp2.text = this.role2.hp.toString();
+        if (this.role1.hp <= 0 || this.role2.hp <= 0) {
+            this.tip.visible = true;
+            this.tip.text = this.role1.hp <= 0 ? "您赢了，点击继续开始" : "您输了，点击继续开始";
+        }
+        else {
+            if (e.data.myself) {
+                for (var i = 0; i < this.btns.length; i++) {
+                    this.btns[i].visible = true;
+                }
+            }
+            else {
+                switch (this.seziState) {
+                    case 1:
+                        this.role1.hitCount--;
+                        if (this.role1.hitCount > 0) {
+                            this.role1.setAni(Animation.MAGIC);
+                        }
+                        else {
+                            for (var i = 0; i < this.btns.length; i++) {
+                                this.btns[i].visible = true;
+                            }
+                        }
+                        break;
+                    case 2:
+                        this.role2.hitCount--;
+                        if (this.role2.hitCount > 0) {
+                            this.role2.setAni(Animation.MAGIC);
+                        }
+                        else {
+                            for (var i = 0; i < this.btns.length; i++) {
+                                this.btns[i].visible = true;
+                            }
+                        }
+                        break;
+                }
+            }
+        }
+    };
+    Main.prototype.onTipEvt = function (e) {
+        this.tip.visible = false;
+        this.role1.hp = 1000;
+        this.role2.hp = 1000;
+        this.hp1.text = this.role1.hp.toString();
+        this.hp2.text = this.role2.hp.toString();
+        for (var i = 0; i < this.btns.length; i++) {
+            this.btns[i].visible = true;
+        }
+    };
+    Main.prototype.seziEvt = function (e) {
+        for (var i = 0; i < this.btns.length; i++) {
+            this.btns[i].visible = false;
+        }
+        var rd = Math.floor(Math.random() * 3);
+        var pk = ["chuitou", "jiandao", "bu"];
+        var self = this;
+        self.seziAniNum = 2;
+        var _npc = Global.Ins().createBitmapByName(pk[rd] + '_png');
+        this.addChild(_npc);
+        _npc.x = -_npc.width;
+        _npc.y = 300;
+        var _user = Global.Ins().createBitmapByName(pk[e.target.tag] + '_png');
+        this.addChild(_user);
+        _user.x = Global.Ins().stageW;
+        _user.y = 300;
+        _user.skewY = 180;
+        if (rd == e.target.tag) {
+            this.seziState = 0;
+        }
+        else {
+            switch (e.target.tag) {
+                case 0:
+                    this.seziState = rd == 1 ? 2 : 1;
+                    break;
+                case 1:
+                    this.seziState = rd == 2 ? 2 : 1;
+                    break;
+                case 2:
+                    this.seziState = rd == 0 ? 2 : 1;
+                    break;
+            }
+        }
+        egret.Tween.get(_npc).to({ x: Math.floor(Global.Ins().stageW / 2) - 30 - _npc.width }, 500).wait(1000).to({ alpha: 0, x: -_npc.width }, 500).call(function () {
+            self.removeChild(_npc);
+            self.seziOver();
+        });
+        egret.Tween.get(_user).to({ x: Math.floor(Global.Ins().stageW / 2) + 30 + _user.width }, 500).wait(1000).to({ alpha: 0, x: Global.Ins().stageW }, 500).call(function () {
+            self.removeChild(_user);
+            self.seziOver();
+        });
+    };
+    Main.prototype.seziOver = function () {
+        this.seziAniNum--;
+        if (this.seziAniNum <= 0) {
+            switch (this.seziState) {
+                case 0:
+                    for (var i = 0; i < this.btns.length; i++) {
+                        this.btns[i].visible = true;
+                    }
+                    break;
+                case 1:
+                    this.role1.aniState = Math.floor(Math.random() * 2) + 1;
+                    this.role1.hitCount = Math.floor(Math.random() * 2) + 1;
+                    break;
+                case 2:
+                    this.role2.aniState = Math.floor(Math.random() * 2) + 1;
+                    this.role2.hitCount = Math.floor(Math.random() * 2) + 1;
+                    break;
+            }
+        }
     };
     return Main;
 }(egret.DisplayObjectContainer));

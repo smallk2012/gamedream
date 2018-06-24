@@ -1,23 +1,665 @@
 {
-	"groups":[
-	{
-		"keys":"bg_jpg,egret_icon_png,description_json",
-		"name":"preload"
-	}],
-	"resources":[
-	{
-		"name":"bg_jpg",
-		"type":"image",
-		"url":"assets/bg.jpg"
-	},
-	{
-		"name":"egret_icon_png",
-		"type":"image",
-		"url":"assets/egret_icon.png"
-	},
-	{
-		"name":"description_json",
-		"type":"json",
-		"url":"config/description.json"
-	}]
+	"groups": [
+		{
+			"name": "preload",
+			"keys": "0084-3c9b8403-02000_png,0084-3c9b8403-02001_png,0084-3c9b8403-02002_png,0084-3c9b8403-02003_png,0084-3c9b8403-02004_png,0084-3c9b8403-02005_png,0084-3c9b8403-02006_png,0084-3c9b8403-02007_png,0084-3c9b8403-02008_png,0084-3c9b8403-02009_png,0084-3c9b8403-02010_png,0084-3c9b8403-02011_png,0084-3c9b8403-02012_png,0222-9e9c0cea-02000_png,0222-9e9c0cea-02001_png,0241-a9b78cf6-02000_png,0241-a9b78cf6-02001_png,0241-a9b78cf6-02002_png,0241-a9b78cf6-02003_png,0241-a9b78cf6-02004_png,0241-a9b78cf6-02005_png,0241-a9b78cf6-02006_png,0130-57edea8e-02000_png,0130-57edea8e-02001_png,0130-57edea8e-02002_png,0130-57edea8e-02003_png,0130-57edea8e-02004_png,0130-57edea8e-02005_png,0130-57edea8e-02006_png,0130-57edea8e-02007_png,0130-57edea8e-02008_png,0130-57edea8e-02009_png,0130-57edea8e-02010_png,0272-bfd770e7-02007_png,0272-bfd770e7-02000_png,0272-bfd770e7-02001_png,0272-bfd770e7-02002_png,0272-bfd770e7-02003_png,0272-bfd770e7-02004_png,0272-bfd770e7-02005_png,0272-bfd770e7-02006_png,0272-bfd770e7-00007_png,0272-bfd770e7-00000_png,0272-bfd770e7-00001_png,0272-bfd770e7-00002_png,0272-bfd770e7-00003_png,0272-bfd770e7-00004_png,0272-bfd770e7-00005_png,0272-bfd770e7-00006_png,0241-a9b78cf6-00006_png,0241-a9b78cf6-00000_png,0241-a9b78cf6-00001_png,0241-a9b78cf6-00002_png,0241-a9b78cf6-00003_png,0241-a9b78cf6-00004_png,0241-a9b78cf6-00005_png,0084-3c9b8403-00012_png,0084-3c9b8403-00000_png,0084-3c9b8403-00001_png,0084-3c9b8403-00002_png,0084-3c9b8403-00003_png,0084-3c9b8403-00004_png,0084-3c9b8403-00005_png,0084-3c9b8403-00006_png,0084-3c9b8403-00007_png,0084-3c9b8403-00008_png,0084-3c9b8403-00009_png,0084-3c9b8403-00010_png,0084-3c9b8403-00011_png,0222-9e9c0cea-00001_png,0222-9e9c0cea-00000_png,0130-57edea8e-00000_png,0130-57edea8e-00001_png,0130-57edea8e-00002_png,0130-57edea8e-00003_png,0130-57edea8e-00004_png,0130-57edea8e-00005_png,0130-57edea8e-00006_png,0130-57edea8e-00007_png,0130-57edea8e-00008_png,0130-57edea8e-00009_png,0130-57edea8e-00010_png,bg_game_jpg,0235-7367af0f-00000_png,0235-7367af0f-00001_png,0235-7367af0f-00002_png,0235-7367af0f-00003_png,0235-7367af0f-00004_png,0235-7367af0f-00005_png,0235-7367af0f-00006_png,0235-7367af0f-00007_png,0235-7367af0f-00008_png,0235-7367af0f-00009_png,0235-7367af0f-00010_png,0235-7367af0f-00011_png,0235-7367af0f-00012_png,0235-7367af0f-00013_png,0235-7367af0f-00014_png,0235-7367af0f-00015_png,0235-7367af0f-00016_png,0235-7367af0f-00017_png,0235-7367af0f-00018_png,0235-7367af0f-00019_png,0235-7367af0f-00020_png,0235-7367af0f-00021_png,0235-7367af0f-00022_png,0235-7367af0f-00023_png,0235-7367af0f-00024_png,0235-7367af0f-00025_png,0235-7367af0f-00026_png,0235-7367af0f-00027_png,0235-7367af0f-00028_png,0235-7367af0f-00029_png,0235-7367af0f-00030_png,0235-7367af0f-00031_png,0235-7367af0f-00032_png,0235-7367af0f-00033_png,0235-7367af0f-00034_png,0235-7367af0f-00035_png,0235-7367af0f-00036_png,0235-7367af0f-00037_png,0235-7367af0f-00038_png,0235-7367af0f-00039_png,0235-7367af0f-00040_png,0235-7367af0f-00041_png,pk3_png,bu_png,chuitou_png,jiandao_png,pk1_png,pk2_png"
+		}
+	],
+	"resources": [
+		{
+			"name": "0084-3c9b8403-02000_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02000.png"
+		},
+		{
+			"name": "0084-3c9b8403-02001_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02001.png"
+		},
+		{
+			"name": "0084-3c9b8403-02002_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02002.png"
+		},
+		{
+			"name": "0084-3c9b8403-02003_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02003.png"
+		},
+		{
+			"name": "0084-3c9b8403-02004_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02004.png"
+		},
+		{
+			"name": "0084-3c9b8403-02005_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02005.png"
+		},
+		{
+			"name": "0084-3c9b8403-02006_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02006.png"
+		},
+		{
+			"name": "0084-3c9b8403-02007_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02007.png"
+		},
+		{
+			"name": "0084-3c9b8403-02008_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02008.png"
+		},
+		{
+			"name": "0084-3c9b8403-02009_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02009.png"
+		},
+		{
+			"name": "0084-3c9b8403-02010_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02010.png"
+		},
+		{
+			"name": "0084-3c9b8403-02011_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02011.png"
+		},
+		{
+			"name": "0084-3c9b8403-02012_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-02012.png"
+		},
+		{
+			"name": "0222-9e9c0cea-02000_png",
+			"type": "image",
+			"url": "assets/xxg/hit/0222-9e9c0cea-02000.png"
+		},
+		{
+			"name": "0222-9e9c0cea-02001_png",
+			"type": "image",
+			"url": "assets/xxg/hit/0222-9e9c0cea-02001.png"
+		},
+		{
+			"name": "0241-a9b78cf6-02000_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-02000.png"
+		},
+		{
+			"name": "0241-a9b78cf6-02001_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-02001.png"
+		},
+		{
+			"name": "0241-a9b78cf6-02002_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-02002.png"
+		},
+		{
+			"name": "0241-a9b78cf6-02003_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-02003.png"
+		},
+		{
+			"name": "0241-a9b78cf6-02004_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-02004.png"
+		},
+		{
+			"name": "0241-a9b78cf6-02005_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-02005.png"
+		},
+		{
+			"name": "0241-a9b78cf6-02006_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-02006.png"
+		},
+		{
+			"name": "0130-57edea8e-02000_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-02000.png"
+		},
+		{
+			"name": "0130-57edea8e-02001_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-02001.png"
+		},
+		{
+			"name": "0130-57edea8e-02002_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-02002.png"
+		},
+		{
+			"name": "0130-57edea8e-02003_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-02003.png"
+		},
+		{
+			"name": "0130-57edea8e-02004_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-02004.png"
+		},
+		{
+			"name": "0130-57edea8e-02005_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-02005.png"
+		},
+		{
+			"name": "0130-57edea8e-02006_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-02006.png"
+		},
+		{
+			"name": "0130-57edea8e-02007_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-02007.png"
+		},
+		{
+			"name": "0130-57edea8e-02008_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-02008.png"
+		},
+		{
+			"name": "0130-57edea8e-02009_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-02009.png"
+		},
+		{
+			"name": "0130-57edea8e-02010_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-02010.png"
+		},
+		{
+			"name": "0272-bfd770e7-02007_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-02007.png"
+		},
+		{
+			"name": "0272-bfd770e7-02000_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-02000.png"
+		},
+		{
+			"name": "0272-bfd770e7-02001_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-02001.png"
+		},
+		{
+			"name": "0272-bfd770e7-02002_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-02002.png"
+		},
+		{
+			"name": "0272-bfd770e7-02003_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-02003.png"
+		},
+		{
+			"name": "0272-bfd770e7-02004_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-02004.png"
+		},
+		{
+			"name": "0272-bfd770e7-02005_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-02005.png"
+		},
+		{
+			"name": "0272-bfd770e7-02006_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-02006.png"
+		},
+		{
+			"name": "0272-bfd770e7-00007_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-00007.png"
+		},
+		{
+			"name": "0272-bfd770e7-00000_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-00000.png"
+		},
+		{
+			"name": "0272-bfd770e7-00001_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-00001.png"
+		},
+		{
+			"name": "0272-bfd770e7-00002_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-00002.png"
+		},
+		{
+			"name": "0272-bfd770e7-00003_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-00003.png"
+		},
+		{
+			"name": "0272-bfd770e7-00004_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-00004.png"
+		},
+		{
+			"name": "0272-bfd770e7-00005_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-00005.png"
+		},
+		{
+			"name": "0272-bfd770e7-00006_png",
+			"type": "image",
+			"url": "assets/xxg/die/0272-bfd770e7-00006.png"
+		},
+		{
+			"name": "0241-a9b78cf6-00006_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-00006.png"
+		},
+		{
+			"name": "0241-a9b78cf6-00000_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-00000.png"
+		},
+		{
+			"name": "0241-a9b78cf6-00001_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-00001.png"
+		},
+		{
+			"name": "0241-a9b78cf6-00002_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-00002.png"
+		},
+		{
+			"name": "0241-a9b78cf6-00003_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-00003.png"
+		},
+		{
+			"name": "0241-a9b78cf6-00004_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-00004.png"
+		},
+		{
+			"name": "0241-a9b78cf6-00005_png",
+			"type": "image",
+			"url": "assets/xxg/edle/0241-a9b78cf6-00005.png"
+		},
+		{
+			"name": "0084-3c9b8403-00012_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00012.png"
+		},
+		{
+			"name": "0084-3c9b8403-00000_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00000.png"
+		},
+		{
+			"name": "0084-3c9b8403-00001_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00001.png"
+		},
+		{
+			"name": "0084-3c9b8403-00002_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00002.png"
+		},
+		{
+			"name": "0084-3c9b8403-00003_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00003.png"
+		},
+		{
+			"name": "0084-3c9b8403-00004_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00004.png"
+		},
+		{
+			"name": "0084-3c9b8403-00005_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00005.png"
+		},
+		{
+			"name": "0084-3c9b8403-00006_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00006.png"
+		},
+		{
+			"name": "0084-3c9b8403-00007_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00007.png"
+		},
+		{
+			"name": "0084-3c9b8403-00008_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00008.png"
+		},
+		{
+			"name": "0084-3c9b8403-00009_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00009.png"
+		},
+		{
+			"name": "0084-3c9b8403-00010_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00010.png"
+		},
+		{
+			"name": "0084-3c9b8403-00011_png",
+			"type": "image",
+			"url": "assets/xxg/magic/0084-3c9b8403-00011.png"
+		},
+		{
+			"name": "0222-9e9c0cea-00001_png",
+			"type": "image",
+			"url": "assets/xxg/hit/0222-9e9c0cea-00001.png"
+		},
+		{
+			"name": "0222-9e9c0cea-00000_png",
+			"type": "image",
+			"url": "assets/xxg/hit/0222-9e9c0cea-00000.png"
+		},
+		{
+			"name": "0130-57edea8e-00000_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-00000.png"
+		},
+		{
+			"name": "0130-57edea8e-00001_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-00001.png"
+		},
+		{
+			"name": "0130-57edea8e-00002_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-00002.png"
+		},
+		{
+			"name": "0130-57edea8e-00003_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-00003.png"
+		},
+		{
+			"name": "0130-57edea8e-00004_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-00004.png"
+		},
+		{
+			"name": "0130-57edea8e-00005_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-00005.png"
+		},
+		{
+			"name": "0130-57edea8e-00006_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-00006.png"
+		},
+		{
+			"name": "0130-57edea8e-00007_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-00007.png"
+		},
+		{
+			"name": "0130-57edea8e-00008_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-00008.png"
+		},
+		{
+			"name": "0130-57edea8e-00009_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-00009.png"
+		},
+		{
+			"name": "0130-57edea8e-00010_png",
+			"type": "image",
+			"url": "assets/xxg/attack/0130-57edea8e-00010.png"
+		},
+		{
+			"name": "bg_game_jpg",
+			"type": "image",
+			"url": "assets/bg_game.jpg"
+		},
+		{
+			"name": "0235-7367af0f-00000_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00000.png"
+		},
+		{
+			"name": "0235-7367af0f-00001_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00001.png"
+		},
+		{
+			"name": "0235-7367af0f-00002_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00002.png"
+		},
+		{
+			"name": "0235-7367af0f-00003_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00003.png"
+		},
+		{
+			"name": "0235-7367af0f-00004_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00004.png"
+		},
+		{
+			"name": "0235-7367af0f-00005_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00005.png"
+		},
+		{
+			"name": "0235-7367af0f-00006_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00006.png"
+		},
+		{
+			"name": "0235-7367af0f-00007_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00007.png"
+		},
+		{
+			"name": "0235-7367af0f-00008_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00008.png"
+		},
+		{
+			"name": "0235-7367af0f-00009_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00009.png"
+		},
+		{
+			"name": "0235-7367af0f-00010_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00010.png"
+		},
+		{
+			"name": "0235-7367af0f-00011_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00011.png"
+		},
+		{
+			"name": "0235-7367af0f-00012_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00012.png"
+		},
+		{
+			"name": "0235-7367af0f-00013_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00013.png"
+		},
+		{
+			"name": "0235-7367af0f-00014_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00014.png"
+		},
+		{
+			"name": "0235-7367af0f-00015_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00015.png"
+		},
+		{
+			"name": "0235-7367af0f-00016_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00016.png"
+		},
+		{
+			"name": "0235-7367af0f-00017_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00017.png"
+		},
+		{
+			"name": "0235-7367af0f-00018_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00018.png"
+		},
+		{
+			"name": "0235-7367af0f-00019_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00019.png"
+		},
+		{
+			"name": "0235-7367af0f-00020_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00020.png"
+		},
+		{
+			"name": "0235-7367af0f-00021_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00021.png"
+		},
+		{
+			"name": "0235-7367af0f-00022_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00022.png"
+		},
+		{
+			"name": "0235-7367af0f-00023_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00023.png"
+		},
+		{
+			"name": "0235-7367af0f-00024_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00024.png"
+		},
+		{
+			"name": "0235-7367af0f-00025_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00025.png"
+		},
+		{
+			"name": "0235-7367af0f-00026_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00026.png"
+		},
+		{
+			"name": "0235-7367af0f-00027_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00027.png"
+		},
+		{
+			"name": "0235-7367af0f-00028_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00028.png"
+		},
+		{
+			"name": "0235-7367af0f-00029_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00029.png"
+		},
+		{
+			"name": "0235-7367af0f-00030_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00030.png"
+		},
+		{
+			"name": "0235-7367af0f-00031_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00031.png"
+		},
+		{
+			"name": "0235-7367af0f-00032_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00032.png"
+		},
+		{
+			"name": "0235-7367af0f-00033_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00033.png"
+		},
+		{
+			"name": "0235-7367af0f-00034_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00034.png"
+		},
+		{
+			"name": "0235-7367af0f-00035_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00035.png"
+		},
+		{
+			"name": "0235-7367af0f-00036_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00036.png"
+		},
+		{
+			"name": "0235-7367af0f-00037_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00037.png"
+		},
+		{
+			"name": "0235-7367af0f-00038_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00038.png"
+		},
+		{
+			"name": "0235-7367af0f-00039_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00039.png"
+		},
+		{
+			"name": "0235-7367af0f-00040_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00040.png"
+		},
+		{
+			"name": "0235-7367af0f-00041_png",
+			"type": "image",
+			"url": "assets/skills/longteng/0235-7367af0f-00041.png"
+		},
+		{
+			"name": "pk3_png",
+			"type": "image",
+			"url": "assets/pk3.png"
+		},
+		{
+			"name": "bu_png",
+			"type": "image",
+			"url": "assets/bu.png"
+		},
+		{
+			"name": "chuitou_png",
+			"type": "image",
+			"url": "assets/chuitou.png"
+		},
+		{
+			"name": "jiandao_png",
+			"type": "image",
+			"url": "assets/jiandao.png"
+		},
+		{
+			"name": "pk1_png",
+			"type": "image",
+			"url": "assets/pk1.png"
+		},
+		{
+			"name": "pk2_png",
+			"type": "image",
+			"url": "assets/pk2.png"
+		}
+	]
 }

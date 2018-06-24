@@ -10,6 +10,12 @@
 	"game": [
 		"bin-debug/LoadingUI.js",
 		"bin-debug/Main.js",
-		"bin-debug/Platform.js"
+		"bin-debug/Platform.js",
+		"bin-debug/base/Animation.js",
+		"bin-debug/base/Btn.js",
+		"bin-debug/base/HP.js",
+		"bin-debug/base/SkillAni.js",
+		"bin-debug/util/AniEvent.js",
+		"bin-debug/util/Global.js"
 	]
 }
